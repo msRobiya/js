@@ -131,7 +131,7 @@ section {
     color: #000;
 }
 
-.media-icons a {
+.medium-icons a {
     color: #fff;
     font-size: 25px;
     margin-right: 30px;
@@ -300,4 +300,27 @@ section {
 .skills .php::before {
     width: 70%;
     background: #6D7EB8;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.title p {
+    width: 80%;
+}
+
+.services .content .card {
+    background: #fff;
+    width: 300px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15%);
+    border-radius: 10px;
 }
