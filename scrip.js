@@ -3,4 +3,14 @@ window.addEventListener('DOMContentLoaded', function() {
         const header = document.querySelector('header');
         header.classList.toggle('sticky', window.scrollY > 0)
     })
+
+    const menuBtn = document.querySelector('.menu-btn')
+    const navigation = document.querySelector('.navigation')
+    const navigationItem = document.querySelectorAll('.navigation a')
+
+    menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('active')
+        navigation.classList.toggle('active')
+    })
+
 })

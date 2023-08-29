@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Quicksand:wght@400;500;600;700&family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
+@import url('http s://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Quicksand:wght@400;500;600;700&family=Roboto&family=Roboto+Condensed:wght@700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ header .navigation a {
 }
 
 header .navigation a:hover {
-    color: crimson;
+    color: #666;
 }
 
 section {
@@ -120,6 +120,7 @@ section {
 .btn {
     color: #fff;
     background: crimson;
+    font-size: 17px;
     font-weight: 600;
     display: inline-block;
     padding: 10px 20px;
@@ -203,6 +204,16 @@ section {
     position: relative;
     width: 100%;
     min-height: 450px;
+}
+
+.about .content .img-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .about .content .img-card a {
@@ -519,8 +530,37 @@ section {
     header {
         padding: 12px 20px;
     }
+    header.stiky {
+        padding: 10px 20px;
+    }
     header .navigation {
         display: none;
+    }
+    header.navigation a {
+        color: #000;
+        font-size: 22px;
+        margin: 10px;
+        padding: 0 20px;
+        border-radius: 20px;
+    }
+    header .navigation.active {
+        z-index: 888;
+        position: fixed;
+        background: #fff;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 0 25px rgba(1, 1, 1, 15%);
+        transition: .3s ease;
+    }
+    header.navigation a:hover {
+        background: crimson;
+        color: #fff;
     }
     .menu-btn {
         position: absolute;
@@ -533,6 +573,14 @@ section {
         margin: 0 20px;
         cursor: pointer;
         transition: .4s ease;
+        filter: invert(1);
+    }
+    .menu-btn.active {
+        z-index: 999;
+        background: url(/img/close.png) no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: .3s ease;
     }
     section {
         padding: 80px 20px;
