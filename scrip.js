@@ -12,5 +12,19 @@ window.addEventListener('DOMContentLoaded', function() {
         menuBtn.classList.toggle('active')
         navigation.classList.toggle('active')
     })
+    navigationItems.forEach(navItem => {
+        navItem.addEventListener('click', () => {
+            menuBtn.classList.remove('active')
+            navigation.classList.remove('active')
+        })
+    })
+    const scrollBtn = this.document.querySelector('.scrollToTop-btn')
+    window.addEventListener('scroll', () => {
+        scrollBtn.classList.toggle('active', window.scrollY > 500)
+    })
+    scrollBtn.addEventListener('click', () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
 
 })
