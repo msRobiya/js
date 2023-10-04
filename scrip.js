@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const menuBtn = document.querySelector('.menu-btn')
     const navigation = document.querySelector('.navigation')
-    const navigationItem = document.querySelectorAll('.navigation a')
+    const navigationItems = document.querySelectorAll('.navigation a')
 
     menuBtn.addEventListener('click', () => {
         menuBtn.classList.toggle('active')

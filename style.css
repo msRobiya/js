@@ -536,7 +536,7 @@ section {
     header .navigation {
         display: none;
     }
-    header.navigation a {
+    header .navigation a {
         color: #000;
         font-size: 22px;
         margin: 10px;
@@ -558,7 +558,7 @@ section {
         box-shadow: 0 25px rgba(1, 1, 1, 15%);
         transition: .3s ease;
     }
-    header.navigation a:hover {
+    header .navigation a:hover {
         background: crimson;
         color: #fff;
     }
